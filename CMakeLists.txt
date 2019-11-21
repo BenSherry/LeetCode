@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.13.1) 
+project(Trunk)
+set(CMAKE_CXX_STANDARD 17)
+add_definitions(-std=c++17)
+add_subdirectory(Solutions)
+add_executable(Trunk main.cpp)
+target_link_libraries(Trunk AllSolution)
+target_link_libraries(Trunk
+    pthread
+    gmock
+    gtest
+)
