@@ -8,6 +8,7 @@
 #include "Solutions/Helper.hpp"
 #include "Solutions/UniqueArray.hpp"
 #include "Solutions/log/logger.hpp"
+#include "Solutions/Math.hpp"
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
 {
@@ -15,6 +16,16 @@ TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
   std::vector<int>  input {3, 3, 1, 9, 5, 4, 4 ,2};
   EXPECT_EQ(twoSumSolution.twoSum1(input, 6).size(), 6);
   TRACE_LOG("Test done.");
+}
+
+TEST(Pow, PowTimeout)
+{
+  Pow::Solution powSolution;
+  EXPECT_EQ(powSolution.myPowTimeOut(3, 4), 81);
+  EXPECT_EQ(powSolution.myPowTimeOut(4, -1), 0.25);
+  EXPECT_EQ(powSolution.myPow(3, 0), 1);
+  EXPECT_EQ(powSolution.myPow(3, 1), 3);
+  EXPECT_EQ(powSolution.myPow(4, -1), 0.25);
 }
 
 int main(int argc,char **argv){
