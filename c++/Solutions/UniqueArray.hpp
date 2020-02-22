@@ -25,8 +25,7 @@ private:
     }
 public:
     int removeDuplicates(std::vector<int>& nums);
-    int removeDuplicates(std::vector<int>&nums, int target);
-    int removeDuplicatesbyMove(std::vector<int>&nums, int target);
+    int removeDuplicates(std::vector<int>& nums, int target);
+    int removeDuplicatesbyMove(std::vector<int>& nums, int target);
 };
-
 }
