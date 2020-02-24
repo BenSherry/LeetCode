@@ -12,6 +12,7 @@
 #include "Solutions/largestSumAfterKNegations.hpp"
 #include "Solutions/setZeroes.hpp"
 #include "Solutions/diStringMatch.hpp"
+#include "Solutions/basic_calculator.hpp"
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
 {
@@ -108,6 +109,13 @@ TEST(diStringMatchShould, DiStringMatch)
 
     std::vector<int> expResult{0, 4, 1, 3, 2};
     EXPECT_EQ(result,expResult);
+}
+TEST(basic_calculatorShould, Basic_calculator)
+  {
+    basic_calculator::Solution solution;
+    std::string pattern = "3+(19-57+(2-1)-(4-5))";
+    auto result = solution.basic_calculator(pattern);
+    EXPECT_EQ(result,-33);
 }
 
 int main(int argc,char **argv){
