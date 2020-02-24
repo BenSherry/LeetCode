@@ -48,9 +48,6 @@ std::vector<int> Solution::twoSum1(std::vector<int>& nums, int target)
         {
             index2 = std::distance(std::begin(nums), std::find(fistPosition+1, nums.end(), second));
         }
-            
-        std::cout << "first is:" << first << " second is " << second << "\n";
-        std::cout << "index1 is:" << index1 << " index2 is " << index2 << "\n";
         result.push_back(index1);
         result.push_back(index2);
         }
@@ -98,5 +95,4 @@ std::vector<int> Solution::twoSum2(std::vector<int>& nums, int target)
     }
     return result;
 }
-
 }

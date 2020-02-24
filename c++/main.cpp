@@ -113,9 +113,19 @@ TEST(diStringMatchShould, DiStringMatch)
 TEST(basic_calculatorShould, Basic_calculator)
   {
     basic_calculator::Solution solution;
-    std::string pattern = "3+(19-57+(2-1)-(4-5))";
-    auto result = solution.basic_calculator(pattern);
-    EXPECT_EQ(result,-33);
+    std::string pattern1 = "3+(19-57+(2-1)-(4-5))";
+    std::string pattern2 = "(-5)";
+    std::string pattern3 = "(5)";
+    std::string pattern4 = "(5-(1+(5)))";
+  
+    auto result1 = solution.basic_calculator(pattern1);
+    auto result2 = solution.basic_calculator(pattern2);
+    auto result3 = solution.basic_calculator(pattern3); 
+    auto result4 = solution.basic_calculator(pattern4);
+    EXPECT_EQ(result1, -33);
+    EXPECT_EQ(result2, -5);
+    EXPECT_EQ(result3, 5);
+    EXPECT_EQ(result4, -1);
 }
 
 int main(int argc,char **argv){

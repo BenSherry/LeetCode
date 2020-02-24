@@ -34,7 +34,12 @@ int Solution::basic_calculator(std::string pattern)
                 {
                     expre.pop();
                     std::reverse(subPattern.begin(), subPattern.end());
-                    auto tempRes = std::to_string(calculator_no_parenthes(subPattern));
+                    auto longtempRes = calculator_no_parenthes(subPattern);
+                    if (expre.empty())
+                    {
+                        return longtempRes;
+                    }
+                    auto tempRes = std::to_string(longtempRes);
                     int j = 0;
                     if ('-' == tempRes[0])
                     {
@@ -69,13 +74,17 @@ int Solution::basic_calculator(std::string pattern)
     return calculator_no_parenthes(pattern_no_parenthes);
 }
 
-int Solution::calculator_no_parenthes(std::string pattern)
+long long Solution::calculator_no_parenthes(std::string pattern)
 {
     int len = pattern.length();
-    int result = 0;
-    std::vector<int> numbers;
+    long long result = 0;
+    std::vector<long long> numbers;
     int sign = 1;
-    int temp = 0;
+    if (pattern[0] == '-')
+    {
+        sign = -1;
+    }
+    long long temp = 0;
     for (int i = 0; i < len; i++)
     {   
         if (pattern[i] >=  '0' && pattern[i] <= '9')
