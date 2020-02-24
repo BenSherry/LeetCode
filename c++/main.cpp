@@ -11,6 +11,7 @@
 #include "Solutions/Math.hpp"
 #include "Solutions/largestSumAfterKNegations.hpp"
 #include "Solutions/setZeroes.hpp"
+#include "Solutions/diStringMatch.hpp"
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
 {
@@ -97,6 +98,16 @@ TEST(setZeroesShould, ColumnAndRowToZero)
     EXPECT_EQ(matrix[0],result0);
     EXPECT_EQ(matrix[1],result1);
     EXPECT_EQ(matrix[2],result2);
+}
+
+TEST(diStringMatchShould, DiStringMatch)
+  {
+    diStringMatch::Solution solution;
+    std::string pattern = "IDID";
+    auto result = solution.diStringMatch(pattern);
+
+    std::vector<int> expResult{0, 4, 1, 3, 2};
+    EXPECT_EQ(result,expResult);
 }
 
 int main(int argc,char **argv){
