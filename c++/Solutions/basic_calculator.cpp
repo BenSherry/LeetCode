@@ -12,6 +12,7 @@ int Solution::basic_calculator(std::string pattern)
     std::stack<char> expre;
     std::string pattern_no_space = strReplace(pattern," ","");
     std::string pattern_no_parenthes = "";
+    long long result = 0;
    
     for(int i = 0; i < pattern_no_space.length(); i++)
     {
@@ -37,7 +38,15 @@ int Solution::basic_calculator(std::string pattern)
                     auto longtempRes = calculator_no_parenthes(subPattern);
                     if (expre.empty())
                     {
-                        return longtempRes;
+                        if (i == (pattern_no_space.length() -1))
+                        {
+                            return longtempRes;
+                        }
+                        else
+                        {
+                           return longtempRes + basic_calculator(pattern_no_space.substr(i+1,pattern_no_space.length()-1));
+                        }
+                        
                     }
                     auto tempRes = std::to_string(longtempRes);
                     int j = 0;

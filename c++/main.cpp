@@ -117,15 +117,20 @@ TEST(basic_calculatorShould, Basic_calculator)
     std::string pattern2 = "(-5)";
     std::string pattern3 = "(5)";
     std::string pattern4 = "(5-(1+(5)))";
-  
+    std::string pattern5 = "(+5)";
+    std::string pattern6 = "(1+(4+5+2)-3) +(6 +8)";
     auto result1 = solution.basic_calculator(pattern1);
     auto result2 = solution.basic_calculator(pattern2);
     auto result3 = solution.basic_calculator(pattern3); 
     auto result4 = solution.basic_calculator(pattern4);
+    auto result5 = solution.basic_calculator(pattern5);
+    auto result6 = solution.basic_calculator(pattern6);
     EXPECT_EQ(result1, -33);
     EXPECT_EQ(result2, -5);
     EXPECT_EQ(result3, 5);
     EXPECT_EQ(result4, -1);
+    EXPECT_EQ(result5, 5);
+    EXPECT_EQ(result6, 23);
 }
 
 int main(int argc,char **argv){
