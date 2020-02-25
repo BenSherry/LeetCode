@@ -1,7 +1,6 @@
 #include"TwoSum.hpp"
 namespace TwoSum
 {
-
 std::vector<int> Solution::twoSum1(std::vector<int>& nums, int target)
 {
     std::vector<int> increase {nums};
@@ -19,9 +18,9 @@ std::vector<int> Solution::twoSum1(std::vector<int>& nums, int target)
                 sumIsTarget.find(down) == sumIsTarget.end())
             {
                 if ((up == down && 1 < count(nums.begin(),nums.end(),up)) ||
-                         up != down)
+                    up != down)
                 {
-                        sumIsTarget[up] = down;
+                    sumIsTarget[up] = down;
                 }  
                 break;
             }
@@ -71,7 +70,7 @@ std::vector<int> Solution::twoSum2(std::vector<int>& nums, int target)
                     {
                         sumIsTarget[element] = second;
                     }
-            }  
+            }
         }
 
     for(auto element:sumIsTarget)

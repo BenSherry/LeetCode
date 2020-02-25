@@ -19,7 +19,6 @@ TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
     TwoSum::Solution twoSumSolution;
     std::vector<int>  input {3, 3, 1, 9, 5, 4, 4 ,2};
     EXPECT_EQ(twoSumSolution.twoSum1(input, 6).size(), 6);
-    TRACE_LOG("Test done.");
 }
 
 TEST(Pow, PowTimeout)
