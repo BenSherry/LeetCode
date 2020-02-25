@@ -6,8 +6,4 @@ add_subdirectory(Solutions)
 add_subdirectory(Solutions/log)
 add_executable(Trunk main.cpp)
 target_link_libraries(Trunk AllSolution Logger)
-target_link_libraries(Trunk
-    pthread
-    gmock
-    gtest
-)
+target_link_libraries(Trunk gmock gtest pthread)
