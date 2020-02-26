@@ -49,9 +49,9 @@ std::vector<int> Solution::twoSum1(std::vector<int>& nums, int target)
         }
         result.push_back(index1);
         result.push_back(index2);
-        }
+    }
     return result;
-    
+   
 }
 
 std::vector<int> Solution::twoSum2(std::vector<int>& nums, int target)
@@ -85,10 +85,9 @@ std::vector<int> Solution::twoSum2(std::vector<int>& nums, int target)
             index2 = std::distance(std::begin(nums), std::find(nums.begin(), nums.end(), second));
         }
         else
-            {
+        {
             index2 = std::distance(std::begin(nums), std::find(fistPosition+1, nums.end(), second));
-            }
-
+        }
         result.push_back(index1);
         result.push_back(index2);
     }
