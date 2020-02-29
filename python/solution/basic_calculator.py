@@ -15,7 +15,7 @@ class Solution:
             else:
                 sign = 1
                 subpattern = ""
-                while sign == 1:
+                while True:
                     if expre_stack[-1] != "(":
                         subpattern += expre_stack.pop()
                     else:
@@ -38,7 +38,7 @@ class Solution:
                                     expre_stack[-1] = '-'
                             for i in range(j, len(str_tempRes)):
                                 expre_stack.append(str_tempRes[i])
-                            sign = 0
+                            break
 
         while 0 != len(expre_stack):
             pattern_no_parenthes += expre_stack.pop()
