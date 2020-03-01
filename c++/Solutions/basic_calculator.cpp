@@ -23,16 +23,18 @@ int Solution::basic_calculator(std::string pattern)
         else
         { 
             std::string subPattern = "";
-            int sign = 1;
-            while(sign)
+            while(true)
             {
                 if (expre.top() != '(')
                 {
+                    // get content in a (), this is a true loop
                     subPattern += expre.top();
                     expre.pop();
                 }
                 else
                 {
+                    // calculate a (),
+                    // then load the result and rest pattern_no_space into string expre
                     expre.pop();
                     std::reverse(subPattern.begin(), subPattern.end());
                     auto longtempRes = calculator_no_parenthes(subPattern);
@@ -67,7 +69,7 @@ int Solution::basic_calculator(std::string pattern)
                     {
                         expre.push(tempRes[j]);
                     }
-                    sign = 0;
+                    break;
                 }
                
             }
