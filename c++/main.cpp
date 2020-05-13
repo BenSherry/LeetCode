@@ -14,6 +14,8 @@
 #include "Solutions/diStringMatch.hpp"
 #include "Solutions/basic_calculator.hpp"
 #include "Solutions/compressString.hpp"
+#include "Solutions/binary-tree.hpp"
+#include "Solutions/MinStack.hpp"
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
 {
