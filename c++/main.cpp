@@ -16,6 +16,8 @@
 #include "Solutions/compressString.hpp"
 #include "Solutions/binary-tree.hpp"
 #include "Solutions/MinStack.hpp"
+#include "Solutions/maximum_muti.hpp"
+
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
 {
