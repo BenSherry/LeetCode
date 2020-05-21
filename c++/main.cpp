@@ -17,6 +17,7 @@
 #include "Solutions/binary-tree.hpp"
 #include "Solutions/MinStack.hpp"
 #include "Solutions/maximum_muti.hpp"
+#include "Solutions/addTwoNumbers.hpp"
 
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
@@ -139,6 +140,45 @@ TEST(basic_calculatorShould, Basic_calculator)
     EXPECT_EQ(result5, 5);
     EXPECT_EQ(result6, 23);
     EXPECT_EQ(result7, 3);
+}
+
+TEST(addTwoNumbersShould, reserveLink)
+{
+    auto *node1 = new addTwoNumbers::ListNode(1);
+    auto *node2 = new addTwoNumbers::ListNode(2);
+    auto *node3 = new addTwoNumbers::ListNode(3);
+    node1->next = node2;
+    node2->next = node3;
+    addTwoNumbers::Solution solution;
+    auto node = solution.reserveList(node1);
+    EXPECT_EQ(node->val, 3);
+    EXPECT_EQ(node->next->val, 2);
+    EXPECT_EQ(node->next->next->val, 1);
+    
+}
+
+TEST(addTwoNumbersShould, addwoNum)
+{
+    auto *L1node1 = new addTwoNumbers::ListNode(3);
+    auto *L1node2 = new addTwoNumbers::ListNode(6);
+    auto *L1node3 = new addTwoNumbers::ListNode(9);
+    L1node1->next = L1node2;
+    L1node2->next = L1node3;
+
+    auto *L2node1 = new addTwoNumbers::ListNode(2);
+    auto *L2node2 = new addTwoNumbers::ListNode(2);
+    auto *L2node3 = new addTwoNumbers::ListNode(2);
+    L2node1->next = L2node2;
+    L2node2->next = L2node3;
+
+    addTwoNumbers::Solution solution;
+    auto node = solution.addTwoNumbers(L1node1,L2node1);
+    while (node != NULL)
+    {
+        std::cout << node->val << "\n";
+        node = node->next;
+    }
+    
 }
 
 int main(int argc,char **argv){
