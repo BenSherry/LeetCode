@@ -19,6 +19,8 @@
 #include "Solutions/maximum_muti.hpp"
 #include "Solutions/addTwoNumbers.hpp"
 #include "Solutions/StringHelper.hpp"
+#include "Solutions/maxScoreSightseeingPair.hpp"
+#include "Solutions/numTrees.hpp"
 
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
