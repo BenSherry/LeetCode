@@ -21,6 +21,8 @@
 #include "Solutions/StringHelper.hpp"
 #include "Solutions/maxScoreSightseeingPair.hpp"
 #include "Solutions/numTrees.hpp"
+#include "Solutions/lengthOfLongestSubstring.hpp"
+#include "Solutions/longestPalindrome.hpp"
 
 
 TEST(TwoSum, ReturnFaseWhwnBoxIsSmall)
